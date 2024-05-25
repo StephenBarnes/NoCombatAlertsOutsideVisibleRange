@@ -1,0 +1,9 @@
+{
+	"name": "NoCombatAlertsOutsideVisibleRange",
+	"version": "1.0.0",
+	"title": "No Combat Alerts Outside Visible Range",
+	"author": "StephenB",
+	"factorio_version": "1.1",
+	"dependencies": ["base >= 1.1" ],
+	"description": "Only show alerts for destroyed/damaged buildings if they're fully visible to the player. If a remote outpost's radar is destroyed, you will stop receiving alerts from it."
+}
