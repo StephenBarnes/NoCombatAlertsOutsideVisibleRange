@@ -18,7 +18,7 @@ local alertTypesToDisable = {
 	--defines.alert_type.custom
 }
 function disableAlerts(player)
-	for i, alertType in pairs(alertTypesToDisable) do
+	for i, alertType in ipairs(alertTypesToDisable) do
 		player.disable_alert(alertType)
 	end
 	playerIndexesAlreadyDisabledAlerts[player.index] = true
@@ -44,6 +44,7 @@ function customEntityAlert(event, icon, tooltip)
 	if not (ent and ent.valid) then return end
 	if not isEntityVisible(ent, ent.force) then return end
 	if ent.type == "combat-robot" then return end
+	if ent.name == "crash-site-spaceship" then return end
 	if ent.force == event.force then return end
 	for _, player in pairs(ent.force.players) do
 		if player.valid then

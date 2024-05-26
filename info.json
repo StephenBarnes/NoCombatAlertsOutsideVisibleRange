@@ -5,5 +5,5 @@
 	"author": "StephenB",
 	"factorio_version": "1.1",
 	"dependencies": ["base >= 1.1" ],
-	"description": "Only show alerts for destroyed/damaged buildings if they're fully visible to the player. If a remote outpost's radar is destroyed, you will stop receiving alerts from it."
+	"description": "Only show alerts for destroyed/damaged buildings that are fully visible on the map. When a remote outpost's radar loses power, you will stop receiving alerts from the outpost."
 }
