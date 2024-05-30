@@ -17,7 +17,7 @@ local alertTypesToDisable = {
 	--defines.alert_type.train_out_of_fuel,
 	--defines.alert_type.custom
 }
-function disableAlerts(player)
+local function disableAlerts(player)
 	for i, alertType in ipairs(alertTypesToDisable) do
 		player.disable_alert(alertType)
 	end
@@ -29,17 +29,17 @@ end)
 
 ------------------------------------------------------------------------
 
-function getChunkPos(pos)
+local function getChunkPos(pos)
 	return {pos.x / 32, pos.y / 32}
 end
 
-function isEntityVisible(ent, force)
+local function isEntityVisible(ent, force)
 	return force.is_chunk_visible(ent.surface, getChunkPos(ent.position))
 end
 
 ------------------------------------------------------------------------
 
-function customEntityAlert(event, icon, tooltip)
+local function customEntityAlert(event, icon, tooltip)
 	local ent = event.entity
 	if not (ent and ent.valid) then return end
 	if not isEntityVisible(ent, ent.force) then return end
